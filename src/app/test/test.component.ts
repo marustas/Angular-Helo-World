@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-
+public counter = 0;
+public setCount(){
+  this.counter+=1;
+}
 }
