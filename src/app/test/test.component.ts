@@ -12,8 +12,9 @@ export class TestComponent {
   public isRed = false;
   public myColor = "";
   
-  public changeColor(){
+  public changeColor(value:string){
     this.isRed = !this.isRed;
     this.myColor = this.isRed ? "Red" : "Green";
+    console.log(value);
   }
 }

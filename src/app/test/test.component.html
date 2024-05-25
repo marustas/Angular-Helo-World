@@ -1,4 +1,5 @@
 <p>Hi, I am a regular test component!
     <span [class]="isRed ? 'red-button' : 'green-button'">{{myColor}}</span>
-    <button (click)="changeColor()">Click me!</button>
+    <button (click)="changeColor(myinput.value)">Click me!</button>
+    <input type="text" #myinput>
 </p>
