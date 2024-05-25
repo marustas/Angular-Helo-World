@@ -9,8 +9,11 @@ import { Component } from '@angular/core';
 })
 
 export class TestComponent {
-public isRed = false;
-public setRed(){
-  this.isRed = !this.isRed;
-}
+  public isRed = false;
+  public myColor = "";
+  
+  public changeColor(){
+    this.isRed = !this.isRed;
+    this.myColor = this.isRed ? "Red" : "Green";
+  }
 }

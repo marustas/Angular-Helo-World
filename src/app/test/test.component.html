@@ -1,4 +1,4 @@
 <p>Hi, I am a regular test component!
-    <span [class]=" isRed ? 'special-button' : '' ">My color</span>
-    <button (click)="setRed()">Click me!</button>
+    <span [class]="isRed ? 'red-button' : 'green-button'">{{myColor}}</span>
+    <button (click)="changeColor()">Click me!</button>
 </p>
