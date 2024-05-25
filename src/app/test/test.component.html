@@ -1,4 +1,4 @@
 <p>Hi, I am a regular test component!
-    <span>{{counter}}</span>
-    <button (click)="setCount()">Click me!</button>
+    <span [class]=" isRed ? 'special-button' : '' ">My color</span>
+    <button (click)="setRed()">Click me!</button>
 </p>

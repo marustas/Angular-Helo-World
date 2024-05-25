@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
+
 export class TestComponent {
-public counter = 0;
-public setCount(){
-  this.counter+=1;
+public isRed = false;
+public setRed(){
+  this.isRed = !this.isRed;
 }
 }
