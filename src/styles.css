@@ -1,3 +1,11 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+:root {
+  --bg-color: white;
+  --header-color: white;
+  --border-color: rgb(230, 230, 230);
+}
+
 html,
 body,
 p,
@@ -78,10 +86,4 @@ app-root {
 
 .hidden {
   display: none;
-}
-
-:root {
-  --bg-color: white;
-  --header-color: white;
-  --border-color: rgb(230, 230, 230);
 }
