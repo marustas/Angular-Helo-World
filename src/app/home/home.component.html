@@ -5,4 +5,10 @@
       [product]="product"
     ></app-product>
   </div>
+  <p-paginator
+    (onPageChange)="onPageChange($event)"
+    [rowsPerPageOptions]="[5, 10, 20]"
+    [rows]="rows"
+    [totalRecords]="totalRecords"
+  ></p-paginator>
 </div>
