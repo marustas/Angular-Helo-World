@@ -14,12 +14,23 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent {
   constructor(private productsService: ProductsService) {}
   products: Product[] = [];
-  ngOnInit() {
+
+  onPageChange(event: any) {
+    this.fetchProducts(event.page, event.rows);
+  }
+
+  fetchProducts(page: number, perPage: number) {
     this.productsService
-      .getProducts('http://localhost:3000/clothes', { page: 0, perPage: 3 })
+      .getProducts('http://localhost:3000/clothes', { page, perPage })
       .subscribe((products: Products) => {
         this.products = products.items;
-        console.log(products.items);
+        console.log(this.products);
       });
   }
+  ngOnInit() {
+    this.fetchProducts(0, 5);
+  }
+  // trackByItemId(index: number, product: Product): number {
+  //   return product?.id;
+  // }
 }
