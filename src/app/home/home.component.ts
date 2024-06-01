@@ -39,6 +39,7 @@ export class HomeComponent {
       .subscribe({
         next: (data) => {
           console.log(data);
+          this.fetchProducts(0, this.rows);
         },
         error: (error) => {
           console.log(error);
@@ -46,9 +47,33 @@ export class HomeComponent {
       });
   }
 
-  addProduct(product: Product, id: number) {}
+  addProduct(product: Product, id: number) {
+    this.productsService
+      .addProduct(`http://localhost:3000/${id}`, product)
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+          this.fetchProducts(0, this.rows);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
+  }
 
-  deleteProduct(product: Product, id: number) {}
+  deleteProduct(product: Product, id: number) {
+    this.productsService
+      .deleteProduct(`http://localhost:3000/${id}`)
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+          this.fetchProducts(0, this.rows);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
+  }
 
   ngOnInit() {
     this.fetchProducts(0, this.rows);
