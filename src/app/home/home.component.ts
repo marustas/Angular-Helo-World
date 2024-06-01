@@ -31,6 +31,13 @@ export class HomeComponent {
         this.totalRecords = products.total;
       });
   }
+
+  editProduct(product: Product) {}
+
+  addProduct(product: Product) {}
+
+  deleteProduct(product: Product) {}
+
   ngOnInit() {
     this.fetchProducts(0, this.rows);
   }

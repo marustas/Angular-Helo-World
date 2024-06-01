@@ -14,4 +14,10 @@ export class ProductsService {
   ): Observable<Products> => {
     return this.apiService.get(url, { params, responseType: 'json' });
   };
+
+  editProduct = () => {};
+
+  addProduct = () => {};
+
+  deleteProduct = () => {};
 }
