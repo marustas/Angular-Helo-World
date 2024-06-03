@@ -4,7 +4,6 @@ import { Products, Product } from '../../types';
 import { ProductComponent } from '../components/product/product.component';
 import { CommonModule } from '@angular/common';
 import { PaginatorModule } from 'primeng/paginator';
-import { error } from 'node:console';
 
 @Component({
   selector: 'app-home',
@@ -78,7 +77,4 @@ export class HomeComponent {
   ngOnInit() {
     this.fetchProducts(0, this.rows);
   }
-  // trackByItemId(index: number, product: Product): number {
-  //   return product?.id;
-  // }
 }
